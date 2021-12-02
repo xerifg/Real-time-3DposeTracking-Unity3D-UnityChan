@@ -1,0 +1,60 @@
+[api-updater (non-obsolete-error-filter)] 2021/11/29 19:29:07 : Starting /home/xrf/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 48.128ms
+moved types parse time: 43ms
+candidates parse time : 0ms
+C# parse time         : 165ms
+candidates check time : 31ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2021/11/29 19:32:17 : Starting /home/xrf/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 30.769ms
+moved types parse time: 41ms
+candidates parse time : 1ms
+C# parse time         : 158ms
+candidates check time : 528ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2021/11/29 19:33:12 : Starting /home/xrf/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 36.334ms
+moved types parse time: 44ms
+candidates parse time : 1ms
+C# parse time         : 202ms
+candidates check time : 678ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2021/11/29 19:37:37 : Starting /home/xrf/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 31.317ms
+moved types parse time: 41ms
+candidates parse time : 1ms
+C# parse time         : 208ms
+candidates check time : 607ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2021/11/30 20:29:07 : Starting /home/xrf/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 69.791ms
+moved types parse time: 63ms
+candidates parse time : 1ms
+C# parse time         : 213ms
+candidates check time : 1157ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2021/11/30 20:32:12 : Starting /home/xrf/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 38.963ms
+moved types parse time: 55ms
+candidates parse time : 0ms
+C# parse time         : 205ms
+candidates check time : 48ms
+console write time    : 0ms
+
