@@ -1,4 +1,5 @@
 import copy
+import os
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -122,9 +123,10 @@ def main():
     inp = np.array([])
     out = np.array([])
     isdraw = False # if draw skeleton
-    data_path = '/home/xrf/ActionDetection/data/'
+    path_datas = os.path.abspath(os.path.dirname(os.getcwd()))
+    data_path = f'{path_datas}/data/'
     # # read data
-    dir = ['S5']
+    dir = ['S1']
     fname = ['directions_1', 'discussion_1', 'eating_1', 'greeting_1', 'phoning_1', 'posing_1', 'purchases_1',
              'sitting_1', 'sittingdown_1', 'smoking_1', 'takingphoto_1', 'waiting_1', 'walking_1', 'walkingdog_1',
              'walkingtogether_1',
@@ -188,14 +190,14 @@ def main():
             output_3d = output_3d.reshape(-1, 17 * 3)
             output_3d = np.float32(output_3d)
 
-            if di == 'S5' and fn == 'directions_1':
+            if di == 'S1' and fn == 'directions_1':
                 inp = input_2d
                 out = output_3d
             else:
                 inp = np.vstack((inp, input_2d))
                 out = np.vstack((out, output_3d))
 
-        torch.save((inp, out), 'train_s5.pth.tar')  # save dataset
+        torch.save((inp, out), 'train_s1.pth.tar')  # save dataset
     print("The shape of input: ", inp.shape)
     print("The shape of output: ", out.shape)
 

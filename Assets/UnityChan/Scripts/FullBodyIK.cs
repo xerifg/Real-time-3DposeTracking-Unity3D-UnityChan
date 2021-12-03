@@ -310,6 +310,7 @@ namespace SA
 			[System.Serializable]
 			public class FingerIK
 			{
+				
 			}
 
 			public BodyIK bodyIK;
@@ -636,6 +637,7 @@ namespace SA
 			public BodyIK bodyIK = new BodyIK();
 			public LimbIK limbIK = new LimbIK();
 			public HeadIK headIK = new HeadIK();
+			//public FingerIK fingerIK = new FingerIK();
 		}
 
 		// Memo: Not Serializable
@@ -965,7 +967,7 @@ namespace SA
 					_Prefix( ref fingerBones.little[n], (BoneLocation)((int)littleLocation + n), (n == 0) ? armBones.wrist : fingerBones.little[n - 1] );
 				}
 			}
-
+			// effector 之间层级关系
 			_Prefix( ref rootEffector, EffectorLocation.Root );
 			_Prefix( ref bodyEffectors.hips, EffectorLocation.Hips, rootEffector, bodyBones.hips, leftLegBones.leg, rightLegBones.leg );
 			_Prefix( ref headEffectors.neck, EffectorLocation.Neck, bodyEffectors.hips, headBones.neck );
@@ -1102,6 +1104,7 @@ namespace SA
 								fingers[i, 3] = fingers[i, 2].GetChild( 0 );
 							}
 						}
+						
 					}
 
 					if( neck == null ) {
@@ -1170,13 +1173,12 @@ namespace SA
 					_SetBoneTransform( ref rightArmBones.arm, rightArm );
 					_SetBoneTransform( ref rightArmBones.elbow, rightElbow );
 					_SetBoneTransform( ref rightArmBones.wrist, rightWrist );
-
+					
 					_SetFingerBoneTransform( ref leftHandFingersBones.thumb, leftFingers, 0 );
 					_SetFingerBoneTransform( ref leftHandFingersBones.index, leftFingers, 1 );
 					_SetFingerBoneTransform( ref leftHandFingersBones.middle, leftFingers, 2 );
 					_SetFingerBoneTransform( ref leftHandFingersBones.ring, leftFingers, 3 );
 					_SetFingerBoneTransform( ref leftHandFingersBones.little, leftFingers, 4 );
-
 					_SetFingerBoneTransform( ref rightHandFingersBones.thumb, rightFingers, 0 );
 					_SetFingerBoneTransform( ref rightHandFingersBones.index, rightFingers, 1 );
 					_SetFingerBoneTransform( ref rightHandFingersBones.middle, rightFingers, 2 );
@@ -1373,7 +1375,8 @@ namespace SA
 			internalValues.bodyIK.Update( settings.bodyIK );
 			internalValues.limbIK.Update( settings.limbIK );
 			internalValues.headIK.Update( settings.headIK );
-        }
+			//internalValues.fingerIK.Update(settings.fingerIK);
+		}
 
 		bool _isSyncDisplacementAtLeastOnce = false;
 

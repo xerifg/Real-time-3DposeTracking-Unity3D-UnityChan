@@ -12,18 +12,9 @@
 1. run human pose data capture script
 
    ```shell
-   python 3DPoseCapture/ActionCapture/ActionRecorder.py
+   python Getposedata/ActionRecorder_webcamera.py
    ```
 
-   **Note:**You must change the funtion **saveData(datapose17, num)**  path to yours in ActionRecorder.py. The Unity3D will read data from here.
+   You will find a *3d_data0.txt* in Assets/datats. The Unity3D will read data from here.
 
-   ```python
-   def saveData(datapose17, num):
-       with open(f'/home/xrf/3D Pose Unity Project/Assets/data_Doit/{num}.txt', 'w+') as f:
-           dataString = "[["
-           ......
-   ```
-
-   
-
-2. open your Unity3D and  click run
+2. open your this project in Unity3D and  click run

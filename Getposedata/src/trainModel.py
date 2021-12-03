@@ -165,7 +165,8 @@ optimizer = torch.optim.Adam(model.parameters(), lr=0.001) # 学习率：0.001
 
 class DealDataset(Dataset):
     def __init__(self, fname):
-        (inp, tar) = torch.load(os.path.join('/home/xrf/ActionDetection/src', fname))  # 读取数据
+        path_data = os.getcwd()
+        (inp, tar) = torch.load(os.path.join(path_data, fname))  # 读取数据
         self.x_data = torch.from_numpy(inp)  # from numpy to sensor
         self.y_data = torch.from_numpy(tar)
         self.len = tar.shape[0]

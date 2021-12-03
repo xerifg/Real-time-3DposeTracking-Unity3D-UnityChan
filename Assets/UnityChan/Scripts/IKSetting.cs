@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 
 public class IKSetting : MonoBehaviour
@@ -14,6 +16,7 @@ public class IKSetting : MonoBehaviour
     [SerializeField] string File_Name;
     [SerializeField] int Data_Size;
     GameObject FullbodyIK;
+    private GameObject leftthumb;
     Vector3[] points = new Vector3[17];
     Vector3[] NormalizeBone = new Vector3[12];
     float[] BoneDistance = new float[12];
@@ -105,11 +108,17 @@ public class IKSetting : MonoBehaviour
             );
             DrawLine(BoneList[NormalizeJoint[i, 0]].position + Vector3.right, BoneList[NormalizeJoint[i, 1]].position + Vector3.right, Color.red);
         }
-       for (int i = 0; i < joints.Length / 2; i++)
+        // 更新手部关键点位置
+        //leftthumb = GameObject.Find("Thumb");
+        //BoneList[13].position = Vector3.Lerp(BoneList[13].position,Vector3.up,0.1f);
+        //BoneList[14].transform.position = Vector3.Lerp(BoneList[14].position,BoneList[9].position + Vector3.forward ,0.1f);
+        // 画原数据位置
+       for (int i = 0; i < joints.Length / 2 ; i++)
        {
            DrawLine(points[joints[i, 0]] * 0.001f + new Vector3(-1, 0.8f, 0), points[joints[i, 1]] * 0.001f + new Vector3(-1, 0.8f, 0), Color.blue);
        }
     }
+    // 画12根骨架位置
     void DrawLine(Vector3 s, Vector3 e, Color c)
     {
         Debug.DrawLine(s, e, c);
@@ -132,6 +141,9 @@ enum OpenPoseRef
     RightArm,
     RightElbow,
     RightWrist,
+    
+    //Thumb,
+    //Index,
 };
 enum NormalizeBoneRef
 {

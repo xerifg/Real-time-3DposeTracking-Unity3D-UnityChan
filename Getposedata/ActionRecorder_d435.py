@@ -117,7 +117,8 @@ def saverawimage(img):
     cv2.imwrite(path,img)
 
 def saveData(datapose17, num):
-    with open(f'/home/xrf/RealtimeActionCapture/Assets/datas/3d_data{num}.txt', 'w+') as f:
+    path = os.path.abspath(os.path.dirname(os.getcwd()))
+    with open(f'{path}/Assets/datas/3d_data{num}.txt', 'w+') as f:
         dataString = "[["
         for i in range(0, 3):
             dataString = dataString + "["
@@ -222,7 +223,8 @@ class From2dto3d():
         self.device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
         self.model = LinearModel().to(self.device)  # 初始化模型
         self.model.apply(weight_init)  # 初始化模型参数
-        self.checkpoint = torch.load(os.path.join('/home/xrf/ActionDetection/model', 'ckpt_best.pth.tar'))
+        path_ckpt = os.getcwd()
+        self.checkpoint = torch.load(os.path.join(f'{path_ckpt}/src', 'ckpt_best.pth.tar'))
         self.model.load_state_dict(self.checkpoint['state_dict'])
 
     def run(self, inputs):
