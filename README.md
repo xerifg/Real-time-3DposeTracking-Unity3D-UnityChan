@@ -4,6 +4,7 @@
 
 # Environment
 
+* Ubuntu20.04.01
 * mediapipe  0.8.8
 * opencv-python  4.1.2.30
 * pyqt5  5.15.4
@@ -56,11 +57,15 @@ l control the unity-chan(3D model) by **FullbodyIK**. In short, you will create 
 
  You can learn Inverse Kinematics(**IK**) Unity3D from [here](https://www.youtube.com/watch?v=Kk0xN26ICLQ&t=526s)
 
-# About
+# About knowledge
 
-The video about [ how to install Unity and use it?](https://www.bilibili.com/video/BV18x411X7ds?spm_id_from=333.999.0.0)
+* The video about [ how to install Unity and use it?](https://www.bilibili.com/video/BV18x411X7ds?spm_id_from=333.999.0.0)
 
-You can learn how to use mediapipe from [here](https://www.youtube.com/watch?v=brwgBf6VB0I&t=434s)
+* You can learn how to use mediapipe from [here](https://www.youtube.com/watch?v=brwgBf6VB0I&t=434s)
+
+* [The explanation of Human3.6M data structure](https://www.it610.com/article/1295032957748191232.htm)
+
+* how to control unity-chan [Blog1](https://qiita.com/fuloru169/items/aa2960ea2601fd94b25f), [Blog2](https://qiita.com/kenkra/items/7b5634ff7f8c6bf0257a)
 
 # Questions
 

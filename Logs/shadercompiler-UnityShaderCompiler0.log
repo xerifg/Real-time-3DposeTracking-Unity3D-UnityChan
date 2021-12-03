@@ -1,3 +1,4 @@
 Base path: '/home/xrf/Unity/Hub/Editor/2020.3.20f1/Editor/Data', plugins path '/home/xrf/Unity/Hub/Editor/2020.3.20f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
+Cmd: shutdown
