@@ -1,0 +1,5 @@
+mediapipe==0.8.8
+opencv-python==4.1.2.30
+pyqt5==5.15.4
+torch>=1.1.0
+tqdm

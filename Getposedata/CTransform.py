@@ -31,6 +31,11 @@ def distance_twopoints(a, b):
 # a = [x, y]
 # b = [x^,y^]
 def rotateMatrix(a, b, l_move, T_up):
+    """
+    Input:a, b, l_move, T_up
+    Output: T
+    This function acts to find the transfer matrix T such that the vector a passes through T_up and then through T to obtain the vector b
+    """
     axby = T_up[0][0] * a[0] + T_up[0][1] * a[1]
     if axby == 0:
         axby = 1e-10

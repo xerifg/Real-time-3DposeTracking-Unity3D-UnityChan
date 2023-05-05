@@ -21,7 +21,9 @@ Firstly I use [Mediapipe](https://google.github.io/mediapipe/) to get human 2D p
 1. run human pose data capture script
 
    ```shell
-   python Getposedata/ActionRecorder_webcamera.py
+   pip install -r requirements.txt
+   cd Getposedata 
+   python ActionRecorder_webcamera.py
    ```
 
    You will find a *3d_data0.txt* in Assets/datats. The Unity3D will read data from here.
